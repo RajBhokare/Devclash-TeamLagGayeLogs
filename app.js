@@ -28,6 +28,10 @@ app.get("/login", async (req, res) => {
   res.render("login.ejs");
 });
 
+app.get("/login", async (req, res) => {
+  res.render("login.ejs");
+});
+
 app.listen(port, () => {
   console.log(`Listening on port http://localhost:${port}`);
 });
