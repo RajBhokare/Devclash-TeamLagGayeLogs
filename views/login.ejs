@@ -20,6 +20,13 @@
               <h3 class="fw-bold mb-1">Sign In</h3>
               <p class="text-muted mb-4">Please enter your credentials to continue.</p>
 
+              <% if (typeof error !== 'undefined' && error) { %>
+                <div class="alert alert-danger d-flex align-items-center gap-2 py-2 px-3 rounded-3" role="alert" id="serverError">
+                  <i class="bi bi-exclamation-triangle-fill"></i>
+                  <span><%= error %></span>
+                </div>
+              <% } %>
+
               <div class="d-flex gap-3 mb-4">
                 <button type="button"
                   class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2 py-2">
@@ -35,11 +42,12 @@
                 <p class="text-center fw-semibold mx-3 mb-0 text-muted small">OR CONTINUE WITH EMAIL</p>
               </div>
 
-              <form>
+              <form action="/auth/login" method="POST" id="loginForm" novalidate>
                 <div class="mb-4">
                   <label class="form-label fw-semibold" for="emailInput">Email address</label>
-                  <input type="email" id="emailInput" class="form-control form-control-lg bg-light border-0"
+                  <input type="email" id="emailInput" name="email" class="form-control form-control-lg bg-light border-0"
                     placeholder="name@company.com" required>
+                  <div class="invalid-feedback" id="emailError">Please enter a valid email address.</div>
                 </div>
 
                 <div class="mb-4">
@@ -47,8 +55,15 @@
                     <label class="form-label fw-semibold mb-0" for="passwordInput">Password</label>
                     <a href="#!" class="text-primary fw-semibold text-decoration-none small">Forgot password?</a>
                   </div>
-                  <input type="password" id="passwordInput" class="form-control form-control-lg bg-light border-0"
-                    placeholder="Enter your password" required>
+                  <div class="position-relative">
+                    <input type="password" id="passwordInput" name="password" class="form-control form-control-lg bg-light border-0"
+                      placeholder="Enter your password" required>
+                    <button type="button" class="btn btn-link position-absolute end-0 top-50 translate-middle-y text-muted pe-3" 
+                      id="togglePassword" tabindex="-1" style="z-index:5;">
+                      <i class="bi bi-eye-slash" id="togglePasswordIcon"></i>
+                    </button>
+                  </div>
+                  <div class="invalid-feedback" id="passwordError">Password is required.</div>
                 </div>
 
                 <div class="form-check mb-4">
@@ -58,10 +73,13 @@
                   </label>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-lg w-100">Login to account</button>
+                <button type="submit" class="btn btn-primary btn-lg w-100" id="loginBtn">
+                  <span id="loginBtnText">Login to account</span>
+                  <span id="loginBtnSpinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status"></span>
+                </button>
 
                 <p class="text-center text-muted mt-4 mb-0">
-                  Don't have an account? <a href="#!" class="text-primary fw-bold text-decoration-none">Register
+                  Don't have an account? <a href="/register" class="text-primary fw-bold text-decoration-none">Register
                     here</a>
                 </p>
               </form>
@@ -73,4 +91,5 @@
     </div>
   </div>
 
+  <script src="/js/login.js"></script>
   <%- include('partials/footer.ejs') %>
