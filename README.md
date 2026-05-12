@@ -1,33 +1,45 @@
-🚀 Overview
+# AI Intelligent Meeting System
 
-AI Intelligent Meeting System is a smart meeting management and media processing platform designed to enhance productivity using AI-powered features.
+An AI-powered meeting management platform that simplifies meeting workflows through automated media processing, transcription, and intelligent insight generation.
 
-The system enables users to upload meeting recordings, process audio/video content, and generate intelligent outputs such as summaries, transcriptions, and extracted insights.
+Built with Node.js, Express.js, EJS, and modern backend processing tools, the system enables users to upload meeting recordings and transform them into actionable information through AI-driven automation.
 
-Built using Node.js, Express.js, EJS, and JavaScript, the project combines backend media processing with an interactive and user-friendly interface.
+---
 
-✨ Key Features
-🎥 Upload meeting recordings
-🎵 Convert video to audio
-🧠 AI-powered meeting analysis
-📝 Automatic transcription generation
-📄 Smart meeting summaries
-📂 Organized media management
-⚡ Fast backend processing
-🖥️ Dynamic and responsive UI
-🛠️ Tech Stack
-Frontend
-EJS
-CSS
-JavaScript
-Backend
-Node.js
-Express.js
-AI & Media Processing
-FFmpeg
-Multer
-AI/NLP APIs
-📂 Project Structure
+## Features
+
+- Upload meeting recordings
+- Convert video files into audio
+- Automated meeting transcription
+- AI-generated summaries and insights
+- Organized media and file management
+- Dynamic server-side rendering using EJS
+- Fast backend media processing pipeline
+- Clean and responsive user interface
+
+---
+
+## Tech Stack
+
+### Frontend
+- EJS
+- CSS3
+- JavaScript
+
+### Backend
+- Node.js
+- Express.js
+
+### Media & AI Processing
+- FFmpeg
+- Multer
+- AI/NLP APIs
+
+---
+
+## Project Structure
+
+```bash
 ├── .vscode
 ├── public
 ├── routes
@@ -38,55 +50,56 @@ AI/NLP APIs
 ├── .gitignore
 ├── package.json
 └── package-lock.json
-⚙️ Installation
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/ai-intelligent-meeting-system.git
-2️⃣ Navigate to Project Directory
-cd ai-intelligent-meeting-system
-3️⃣ Install Dependencies
-npm install
-4️⃣ Start the Server
-npm start
-🌐 Local Development
 
-The application runs on:
+Installation
+Clone the repository
+git clone https://github.com/your-username/ai-intelligent-meeting-system.git
+Navigate into the project directory
+cd ai-intelligent-meeting-system
+Install dependencies
+npm install
+Start the development server
+npm start
+Local Development
+
+The application will run at:
 
 http://localhost:3000
-📦 Core Dependencies
+Core Dependencies
 {
   "express": "^4.x",
   "ejs": "^3.x",
   "multer": "^1.x",
   "fluent-ffmpeg": "^2.x"
 }
-🧠 AI Capabilities
+AI Capabilities
 
-The system can be extended to support:
+The platform is designed to support intelligent meeting automation features such as:
 
 Speech-to-text transcription
-AI-generated meeting summaries
+AI-generated summaries
 Keyword extraction
 Action item detection
 Speaker identification
 Sentiment analysis
-🎯 Project Objectives
+Objectives
 
 This project demonstrates:
 
-Full-stack web development
+Full-stack web application development
 AI integration workflows
-Media upload and processing
+Media upload and processing systems
 Backend routing architecture
 Dynamic frontend rendering
-Audio/video handling with Node.js
-🚀 Future Enhancements
-🔐 Authentication System
-☁️ Cloud File Storage
-📱 Fully Responsive Dashboard
-🤝 Real-time Collaboration
-📊 Analytics Dashboard
-🎙️ Live Meeting Transcription
-🤝 Contributing
+Audio and video handling using Node.js
+Future Enhancements
+User authentication and authorization
+Cloud-based file storage integration
+Real-time meeting collaboration
+Analytics dashboard
+Live transcription support
+Advanced AI meeting insights
+Contributing
 
 Contributions are welcome.
 
@@ -95,18 +108,14 @@ Create a feature branch
 Commit your changes
 Push to your branch
 Open a Pull Request
-📄 License
+License
 
 This project is licensed under the MIT License.
 
-👨‍💻 Developer
+Developers
 
-Developed with ❤️ by Team LagGayeLogs
+Developed by Team LagGayeLogs
 
-⭐ Support
+Support
 
-If you found this project useful:
-
-⭐ Star the repository
-🍴 Fork the project
-📢 Share it with others
+If you found this project useful, consider starring the repository and sharing it with others.
